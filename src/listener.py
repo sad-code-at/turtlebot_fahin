@@ -18,15 +18,39 @@ def process_command(data):
 
     if direction =="forward":
         twist.linear.x = speed
+        twist.linear.y = 0
+        twist.linear.z = 0
+        twist.angular.x = 0
+        twist.angular.y = 0
+        twist.angular.z = 0      
     elif direction == "backward":
         twist.linear.x = -speed
+        twist.linear.y = 0
+        twist.linear.z = 0
+        twist.angular.x = 0
+        twist.angular.y = 0
+        twist.angular.z = 0           
     elif direction == "left":
+        twist.linear.x = 0
         twist.linear.y = speed
+        twist.linear.z = 0
+        twist.angular.x = 0
+        twist.angular.y = 0
+        twist.angular.z = 0           
     elif direction == "right":
+        twist.linear.x = 0
         twist.linear.y = -speed
+        twist.linear.z = 0
+        twist.angular.x = 0
+        twist.angular.y = 0
+        twist.angular.z = 0           
     elif direction == "stop":
         twist.linear.x = 0
         twist.linear.y = 0
+        twist.linear.z = 0
+        twist.angular.x = 0
+        twist.angular.y = 0
+        twist.angular.z = 0           
 
     pub.publish(twist)
 
