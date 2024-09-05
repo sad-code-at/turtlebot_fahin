@@ -103,6 +103,6 @@ def process_command(data):
 
 if __name__ == '__main__':
     rospy.init_node('command_processor', anonymous=True)
-    pub = rospy.Publisher('/, Twist, queue_size=10)
-    rospy.Subscriber('/turtlebot_cmd_vel'command', String, process_command)
+    pub = rospy.Publisher('/cmd_vel', Twist, queue_size=10)
+    rospy.Subscriber('/turtlebot_command', String, process_command)
     rospy.spin()
